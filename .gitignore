@@ -1,0 +1,7 @@
+.vscode
+*.pkl
+*.csv
+*.tmp
+*.swp
+data/
+models/
