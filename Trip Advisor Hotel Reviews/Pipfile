@@ -13,6 +13,7 @@ matplotlib = "*"
 seaborn = "*"
 tensorflow-hub = "*"
 pandas = "*"
+xgboost = "*"
 
 [requires]
 python_version = "3.6"

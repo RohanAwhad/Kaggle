@@ -1,7 +1,7 @@
 import gzip
 import numpy as np
 import os
-from pickle
+import pickle
 from sklearn.model_selection import StratifiedKFold
 
 DATASET_DIR = os.path.join("..", "data", "df_with_embeddings.gz")
@@ -10,7 +10,7 @@ with gzip.open(DATASET_DIR, "rb") as stream:
     df = pickle.load(stream)
 
 X = np.array(df["Review_Embeddings"].to_list()).squeeze()
-y = df['Rating'].to_numpy()
+y = df['Rating'].to_numpy() - 1
 
 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
 
